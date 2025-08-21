@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide",page_title="Startup Analysis")
 
-df = pd.read_csv(r"C:\Users\bhavs\OneDrive\Desktop\streamlit\startup_cleaned_new.csv")
+df = pd.read_csv(r"startup_cleaned_new.csv")
 st.sidebar.title("Startup Fandin Analysis")
 df['date'] = pd.to_datetime(df['date'], format='mixed', dayfirst=False)
 df['year'] = df['date'].dt.year
@@ -285,5 +285,6 @@ elif choice == "Invester Analysis":
 )
     if st.sidebar.button('Analysis'):
         perfrom_investers(invester)
+
 
 
